@@ -1,22 +1,17 @@
 package allbegray.slack;
 
-import java.util.Map;
-
-import allbegray.slack.type.Authentication;
-import allbegray.slack.type.EndSnooze;
+import allbegray.slack.type.*;
+import allbegray.slack.webapi.SlackWebApiClient;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import allbegray.slack.type.DndInfo;
-import allbegray.slack.type.DndSimpleInfo;
-import allbegray.slack.type.SetSnooze;
-import allbegray.slack.webapi.SlackWebApiClient;
+import java.util.Map;
 
 public class DndMethodTest {
 
-	private String token = "your slack web api token";
+	private String token = "xoxp-18899142932-18905601458-41812031460-b54fb48eec";
 	private SlackWebApiClient webApiClient;
 
 	@Before
