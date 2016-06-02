@@ -1,13 +1,12 @@
 package allbegray.slack.type;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import allbegray.slack.exception.SlackArgumentException;
+import allbegray.slack.validation.SlackFieldValidationUtils;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-import allbegray.slack.exception.SlackArgumentException;
-import allbegray.slack.validation.SlackFieldValidationUtils;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * reference :
