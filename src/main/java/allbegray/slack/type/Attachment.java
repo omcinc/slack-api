@@ -40,6 +40,9 @@ public class Attachment {
 	protected String image_url;
 	protected String thumb_url;
 
+	protected String footer;
+	protected String footer_icon;
+
 	protected List<String> mrkdwn_in;
 
 	public String getFallback() {
@@ -184,6 +187,22 @@ public class Attachment {
 
 	public void setMrkdwn_in(List<String> mrkdwn_in) {
 		this.mrkdwn_in = mrkdwn_in;
+	}
+
+	public String getFooter() {
+		return footer;
+	}
+
+	public void setFooter(String footer) {
+		this.footer = footer;
+	}
+
+	public String getFooter_icon() {
+		return footer_icon;
+	}
+
+	public void setFooter_icon(String footer_icon) {
+		this.footer_icon = footer_icon;
 	}
 
 	@Override
