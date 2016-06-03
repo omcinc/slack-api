@@ -1,9 +1,9 @@
 package allbegray.slack.type;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Message {
@@ -19,6 +19,9 @@ public class Message {
 	protected String permalink;
 	protected List<String> pinned_to;
 	protected List<Reaction> reactions;
+	protected List<Attachment> attachments;
+	protected File file;
+	protected String channel;
 
 	public String getType() {
 		return type;
@@ -104,6 +107,30 @@ public class Message {
 
 	public void setIs_starred(Boolean is_starred) {
 		this.is_starred = is_starred;
+	}
+
+	public File getFile() {
+		return file;
+	}
+
+	public void setFile(File file) {
+		this.file = file;
+	}
+
+	public String getChannel() {
+		return channel;
+	}
+
+	public void setChannel(String channel) {
+		this.channel = channel;
+	}
+
+	public List<Attachment> getAttachments() {
+		return attachments;
+	}
+
+	public void setAttachments(List<Attachment> attachments) {
+		this.attachments = attachments;
 	}
 
 	@Override
