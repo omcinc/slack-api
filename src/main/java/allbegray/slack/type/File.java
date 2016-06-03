@@ -1,9 +1,9 @@
 package allbegray.slack.type;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class File {
@@ -60,6 +60,16 @@ public class File {
 	protected Boolean is_starred;
 	protected List<String> pinned_to;
 	protected List<Reaction> reactions;
+
+	/**
+	 * Email related fields
+	 */
+	protected String subject;
+	protected List<Contact> to;
+	protected List<Contact> from;
+	protected List<Contact> cc;
+
+	protected String plain_text;
 
 	public String getId() {
 		return id;
@@ -431,6 +441,46 @@ public class File {
 
 	public void setReactions(List<Reaction> reactions) {
 		this.reactions = reactions;
+	}
+
+	public String getPlain_text() {
+		return plain_text;
+	}
+
+	public void setPlain_text(String plain_text) {
+		this.plain_text = plain_text;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public List<Contact> getTo() {
+		return to;
+	}
+
+	public void setTo(List<Contact> to) {
+		this.to = to;
+	}
+
+	public List<Contact> getFrom() {
+		return from;
+	}
+
+	public void setFrom(List<Contact> from) {
+		this.from = from;
+	}
+
+	public List<Contact> getCc() {
+		return cc;
+	}
+
+	public void setCc(List<Contact> cc) {
+		this.cc = cc;
 	}
 
 	@Override
