@@ -61,7 +61,7 @@ public abstract class RestUtils {
 			httpPost.setEntity(httpEntity);
 			String retStr = httpClient.execute(httpPost, new StringResponseHandler());
 			
-			logger.info("return : " + retStr);
+			logger.debug("return : " + retStr);
 			
 			return retStr;
 		} catch (IOException e) {
